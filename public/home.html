@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<title>Home</title>
+</head>
+
+
+<body>
+<!-- NavBar -->
+<!-- Header -->
+<nav x-data="{ open: false }" class="sticky top-0 w-full z-10 bg-secondary text-gray-100">
+<div class="px-2 bg-secondary text-white flex justify-between items-center">
+<div class="text-xl font-semibold tracking-widest text-blue flex items-center">
+    <img class="h-20 py-2 px-2" src="/public/images/XL-Burger.png" alt=""></div>
+<div class="text-2xl" @click="open=true">&equiv;</div>
+</div>
+
+<!-- Search-Bar| price and rate -->
+<div x-show="open" @click.away="open=false">
+<div class=" mt-1 mx-2">
+    <input class="form-control" type="text" name="search" placeholder="Search"></div>
+
+<div class="py-2 mx-2 md:flex justify-around">
+    <div class="flex">
+        Price
+        <div class="ml-2">$</div>
+        <div class="ml-2 text-primary">$$</div>
+        <div class="ml-2">$$$</div>
+        <div class="ml-2">$$$$<div>
+        </div>
+    </div>
+</div>
+
+<div class="flex">
+    Rate
+    <div class="ml-2 text-primary">&starf;</div>
+    <div class="ml-px text-primary">&starf;</div>
+    <div class="ml-px text-primary">&starf;</div>
+    <div class="ml-px text-primary">&starf;</div>
+    <div class="ml-px">&star;</div>
+</div>
+<div>
+    <button class="btn mt-auto btn-primary">Filter</button>
+</div>      
+</div>
+</div>
+</nav>
+
+    <!-- Banner -->
+<main class=" ">
+    <div class="md:h-96 md:bg-center h-56 bg-no-repeat bg-cover bg-center" style="background-image: url(https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);"></div>
+    
+    <!-- Cards Container -->
+    <!-- Cards 1-->
+    <div class="container mx-auto md:mt-4 md:flex">
+        <div class="card-body">
+            <div>
+                <img class="w-full md:w-48  md:h-full object-cover rounded-lg md:rounded-r-sm" src="https://images.unsplash.com/photo-1564362411991-472954b39f56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=600&q=80" alt="">
+            </div>
+            <div class="card-style">
+            <h2 class="card-tittle">XL Burger</h2>
+            <p class="card-description"> 320gr of meat, cheese bread, american double cheese.</p>
+            <div class="card-price">11.5 USD$</div>
+            <div class="card-rate">&starf;&starf;&starf;&starf;&starf; | 108 reviews</div>
+            <button class="btn"> Order </button>
+        </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card-body md:ml-8">
+            <div>
+                <img class="w-full md:w-48  md:h-full object-cover rounded-lg md:rounded-r-sm" src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=600&q=80" alt="">
+            </div>
+            <div class="card-style">
+            <h2 class="card-tittle">XPerience Tasty</h2>
+            <p class="card-description"> 320gr of meat, double bacon and pickles .</p>
+            <div class="card-price">9.5 USD$</div>
+            <div class="card-rate">&starf;&starf;&starf;&starf;&star; | 88 reviews</div>
+            <button class="btn"> Order </button>
+        </div>
+        </div>
+    </div>
+        <!-- Card 3 -->
+        <div class="container mx-auto md:mt-4 md:flex">
+        <div class="card-body">
+            <div>
+                <img class="w-full md:w-48  md:h-full object-cover rounded-lg md:rounded-r-sm" src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=600&q=80" alt="">
+            </div>
+            <div class="card-style">
+            <h2 class="card-tittle">Xtra Veggie</h2>
+            <p class="card-description"> 160 gr chickpea burger, american cheddar, lettuce.</p>
+            <div class="card-price">10 USD$</div>
+            <div class="card-rate">&starf;&starf;&starf;&starf;&starf; | 95 reviews</div>
+            <button class="btn"> Order </button>
+        </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="card-body md:ml-8">
+            <div>
+                <img class="w-full md:w-48  md:h-full object-cover rounded-lg md:rounded-r-sm" src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=600&q=80" alt="">
+            </div>
+            <div class="card-style">
+            <h2 class="card-tittle">XPlotion Flavor</h2>
+            <p class="card-description"> French fries with bacon and cheese.</p>
+            <div class="card-price">5 USD$</div>
+            <div class="card-rate">&starf;&starf;&starf;&starf;&star; | 80 reviews</div>
+            <button class="btn"> Order </button>
+        </div>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <div class="container bg-secondary mt-10 mb-10 md:mx-auto md:mb-10 md:rounded-lg md:p-6 w-full md:w-1/2">
+    <div>
+        <div class="form-style text-center">CONTACT US 💌</div>
+        <div class="form-style">Name</div>
+        <input class="form-control placeholder-secondary" type="text" placeholder="">
+    </div>
+
+    <div>
+        <div class="form-style">Mail</div>
+        <input class="form-control placeholder-secondary" type="text" placeholder="">
+    </div>
+
+    <div>
+    <div class="form-style">Feedback</div>
+    <textarea class="form-control name=" id="" cols="30" rows="10"></textarea>
+    </div>
+
+    <div>
+        <button class="btn mx-auto font-semibold">Submit</button>
+    </div>
+
+</div>
+</main>
+
+    <!-- Footer -->
+
+<footer class="mx-auto mt-2 items-center w-full bg-secondary text-white">
+    <!-- Social Media -->
+    <div class="flex flex-row-reverse justify-around">
+    <div class="mt-4 ml-8 flex flex-col">
+    <div class="hover:text-primary"> <i class="fa fa-facebook"></i></div>
+    <div class="hover:text-primary"> <i class="fa fa-twitter"></i> </div>
+    <div class="hover:text-primary"> <i class="fa fa-instagram"></i></div>
+    </div>
+
+<!--Copyright  -->
+    <ul class="mt-4 mb-4 ml-8 md:list-disc">
+        <li class="hover:text-primary">Support</li>
+        <li class="hover:text-primary">About us</li>
+        <li class="hover:text-primary">Customer Services</li>
+        <li class="hover:text-primary">Legal</li>
+    </ul>
+</div>
+</footer>
+</body>
+</html>

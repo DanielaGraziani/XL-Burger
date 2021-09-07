@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .card-body{
+        @apply mx-2 md:mx-4 mt-4 md:w-1/2 md:flex md:shadow-2xl md:bg-secondary rounded-lg
+    }
+
+    .card-style{
+        @apply relative mx-2 p-2 shadow-lg md:shadow-none bg-white md:bg-transparent rounded-lg -mt-2
+    }
+
+
+    .card-tittle{
+        @apply text-lg tracking-tight font-semibold md:text-white text-gray-900 uppercase
+    }
+
+    .card-description{
+        @apply mt-2 text-gray-700 md:text-white leading-snug
+    }
+
+    .card-price{
+        @apply mt-2 text-sm font-semibold text-gray-700 md:text-white
+    }
+
+    .card-rate{
+        @apply mt-2 text-xs text-yellow-700 md:text-yellow-500
+    }
+
+    .card-button{
+        @apply font-semibold text-secondary bg-red-400 rounded-lg px-4 py-1 mt-6
+    }
+
+    .form-control{
+    @apply w-full leading-snug text-gray-800 py-1 px-4 rounded bg-gray-200 hover:bg-white focus:outline-none focus:ring-2 ;
+}
+    .form-style{
+        @apply text-white text-lg font-semibold
+    }
+
+    .btn{
+    @apply rounded shadow-xl py-1 px-4 bg-red-400 font-semibold mt-6 block hover:shadow-none hover:text-white
+}
+
+}
+
+
